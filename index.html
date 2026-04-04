@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клуб Бразильского Джиу-Джитсу - Тренировки BJJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-row">
+                <img src="images/logo1.jpg" alt="Логотип клуба слева" class="club-logo">
+                <h1>Клуб Бразильского Джиу-Джитсу</h1>
+                <img src="images/logo2.jpg" alt="Логотип клуба справа" class="club-logo">
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about">О клубе</a></li>
+                    <li><a href="#coaches">Тренера</a></li>
+                    <li><a href="#schedule">Расписание</a></li>
+                    <li><a href="#pricing">Цены</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="burger-button" id="burgerButton" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="burger-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
+        <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+            <ul>
+                <li><a href="#about">О клубе</a></li>
+                <li><a href="#coaches">Тренера</a></li>
+                <li><a href="#schedule">Расписание</a></li>
+                <li><a href="#pricing">Цены</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Бразильское джиу-джитсу для всех уровней</h2>
+            <p>Овладейте искусством боевого мастерства с опытными тренерами</p>
+            <button class="cta-button" onclick="document.querySelector('.contacts').scrollIntoView()">Записаться на тренировку</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>О клубе</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p><strong>Клуб бразильского джиу-джитсу, где результат — это норма.</strong></p>
+                    <p>Мы обучаем с нуля и доводим учеников до уверенного уровня и выступлений на соревнованиях.</p>
+                    <p>Тренировки проходят под руководством опытных спортсменов и призёров всероссийских и международных турниров.</p>
+                    <p>У нас вы получите не только навыки самообороны, но и силу, уверенность и дисциплину.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/main.jpg" alt="Тренировочный зал" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coach Section -->
+    <section class="coach" style="background: white;" id="coaches">
+        <div class="container coaches-section">
+            <h2>Наши тренера</h2>
+            <div class="coaches-carousel">
+                <button class="carousel-arrow left" onclick="scrollCoaches(-1)">←</button>
+                
+                <div class="coaches-slider" id="coachesSlider">
+                    <div class="coach-main" id="coachMainContainer">
+                        <!-- Основной тренер будет отображаться здесь -->
+                    </div>
+                    <div class="coach-counter" id="coachCounter">1/2</div>
+                </div>
+
+                <button class="carousel-arrow right" onclick="scrollCoaches(1)">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2>Расписание занятий</h2>
+            <div class="schedule-scroll">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Группа</th>
+                        <th>Дни недели</th>
+                        <th>Время</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Группа детей</strong></td>
+                        <td>Пн, Ср, Пт</td>
+                        <td>19:00 – 20:10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Группа взрослых</strong></td>
+                        <td>Пн, Ср, Пт</td>
+                        <td>20:15 – 21:50</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Варианты абонементов</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Первое пробное занятие</h3>
+                    <div class="price">БЕСПЛАТНОЕ<span class="price-period"></span></div>
+                    <p style="color: #999; margin-bottom: 1rem;">1 раз</p>
+                    <ul>
+                        <li>✓ Выгодно оценить клуб бесплатно</li>
+                    </ul>
+                    <button class="cta-button">Записаться</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Месячный абонемент</h3>
+                    <div class="price">5 000<span class="price-period">₽</span></div>
+                    <p style="color: #999; margin-bottom: 1rem;">1 месяц</p>
+                    <ul>
+                        <li>✓ Выгода: полный месяц тренировок</li>
+                    </ul>
+                    <button class="cta-button">Лучший выбор</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Разовое занятие</h3>
+                    <div class="price">700<span class="price-period">₽</span></div>
+                    <p style="color: #999; margin-bottom: 1rem;">1 занятие</p>
+                    <ul>
+                        <li>✓ Выгода: пробная тренировка по доступной цене</li>
+                    </ul>
+                    <button class="cta-button" onclick="document.querySelector('.contacts').scrollIntoView()">Записаться</button>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: #999; font-size: 0.95rem; cursor: pointer;" onclick="toggleExtendedPlans()">
+                    <span style="text-decoration: underline; color: #777;">→ посмотреть все планы ←</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2>Отзывы участников</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"Отличные инструкторы и гостеприимное сообщество! Я почувствовал результаты уже после первого месяца."</p>
+                    <p class="review-author">— Дамир П.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"Профессиональный подход и индивидуальное внимание каждому ученику. Очень рекомендую!"</p>
+                    <p class="review-author">— Тимур П.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"Прошла от новичка до пурпурного пояса благодаря терпеливому обучению Аркадия. Спасибо команде!"</p>
+                    <p class="review-author">— Виктория С.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"Лучшее решение для здоровья и развития личности. Уже рекомендовал друзьям!"</p>
+                    <p class="review-author">— Александр П.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"Атмосфера в клубе просто потрясающая. Все относятся друг к другу с уважением и поддержкой."</p>
+                    <p class="review-author">— Борис Б.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Галерея</h2>
+            <div class="gallery-grid">
+                <div class="gallery-image"><img src="images/photo1.jpg" alt="Тренировка 1" style="width:100%; height:100%; object-fit:cover; border-radius:10px;"></div>
+                <div class="gallery-image"><img src="images/photo2.jpg" alt="Тренировка 2" style="width:100%; height:100%; object-fit:cover; border-radius:10px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <h3>📍 Связь с нами</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <p><strong>Телефон:</strong><br><a href="tel:+79994725408">+7 (999) 472-54-08</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <p><strong>Email:</strong><br><a href="mailto:podolyakoa76@gmail.com">podolyakoa76@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🏘️</div>
+                        <p><strong>Адрес:</strong><br>г. Ростов-на-Дону, улица Комарова, 18/3с2</p>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Найдите нас в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/podolyakoas/" class="social-link" title="Instagram">📷</a>
+                        <a href="https://vk.com/id91910624" class="social-link" title="VK">🔗</a>
+                        <!-- <a href="#" class="social-link" title="WhatsApp">💬</a> -->
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CPbWUDj5" width="100%" height="340" frameborder="0" allowfullscreen="true" style="border:0;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Клуб Бразильского Джиу-Джитсу. Все права защищены.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Создано для любителей и профессионалов BJJ</p>
+    </footer>
+
+    <!-- Extended Plans Modal -->
+    <div class="modal" id="extendedPlansModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="toggleExtendedPlans()">&times;</span>
+            <h2>Расширенные Планы Абонементов</h2>
+            <div class="extended-plans-grid">
+                <div class="extended-plan-card">
+                    <h3>КВАРТАЛЬНЫЙ Абонемент</h3>
+                    <div class="plan-price">13 500<span>₽</span></div>
+                    <p style="color: #999; margin-bottom: 1rem;">3 месяца</p>
+                    <ul>
+                        <li>✓ Выгода: 10% дешевле чем помесячно</li>
+                    </ul>
+                    <button class="cta-button" onclick="document.querySelector('.contacts').scrollIntoView(); toggleExtendedPlans();">Записаться</button>
+                </div>
+
+                <div class="extended-plan-card featured">
+                    <div class="badge">ЛКШ экономия</div>
+                    <h3>ГОДОВОЙ Абонемент</h3>
+                    <div class="plan-price">50 000<span>₽</span></div>
+                    <p style="color: #999; margin-bottom: 1rem;">12 месяцев</p>
+                    <ul>
+                        <li>✓ Выгода: 25% дешевле чем помесячно</li>
+                    </ul>
+                    <button class="cta-button" onclick="document.querySelector('.contacts').scrollIntoView(); toggleExtendedPlans();">Выбрать этот</button>
+                </div>
+
+                <div class="extended-plan-card">
+                    <h3>ПЕРСОНАЛЬНЫЕ Тренировки</h3>
+                    <div class="plan-price"><span>от </span>1 000<span>₽</span></div>
+                    <p style="color: #999; margin-bottom: 1rem;">Кол-во занятий уточнять у тренера</p>
+                    <ul>
+                        <li>✓ Индивидуальный подход</li>
+                        <li>✓ Ссылки на инструкторов находятся во вкладке "Тренера"</li>
+                    </ul>
+                    <button class="cta-button" onclick="document.querySelector('.contacts').scrollIntoView(); toggleExtendedPlans();">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+
+    <!-- Fixed CTA Button -->
+    <button class="cta-button-fixed" onclick="document.querySelector('.contacts').scrollIntoView()">Записаться 💪</button>
+</body>
+</html>
