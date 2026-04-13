@@ -101,7 +101,7 @@ const coaches = [
     },
     {
         id: 1,
-        name: 'Леопольдо Пирес',
+        name: 'Леопольдо Пирес Барбоса',
         rank: '⚫ Чёрный пояс IBJJF · 4 дан · 20+ лет опыта',
         image: 'images/leo.jpg',
 
@@ -120,6 +120,8 @@ const coaches = [
 
         focus: '<strong>Направленность:</strong> международный уровень подготовки, идеальная техника и подготовка к соревнованиям.',
 
+        socialLink: 'https://www.instagram.com/leopoldo_pires/',
+        buttonText: 'Смотреть тренировки в Instagram*',
     },
     {
         id: 2,
@@ -161,7 +163,7 @@ function createCoachCard(coach) {
                 ${achievementsHtml}
                 ${paragraphsHtml}
                 ${focusHtml}
-                <a href="${coach.socialLink}" target="_blank" rel="noopener noreferrer" class="coach-cta">Записаться на тренировку</a>
+                <a href="${coach.socialLink}" target="_blank" rel="noopener noreferrer" class="coach-cta">${coach.buttonText || 'Записаться на тренировку'}</a>
             </div>
         </div>
     `;
